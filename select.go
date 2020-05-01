@@ -43,7 +43,7 @@ func (i *UI) Select(query string, list []string, opts *Options) (string, error) 
 
 	// Construct the query & display it to user
 	var buf bytes.Buffer
-	buf.WriteString(fmt.Sprintf("%s", query))
+	buf.WriteString(fmt.Sprintf("%s\n", query))
 	for i, item := range list {
 		buf.WriteString(fmt.Sprintf("%d. %s\n", i+1, item))
 	}
